@@ -1,0 +1,10 @@
+{
+  "name": "cartoptima",
+  "version": "0.1.0",
+  "description": "Chrome extension that compares medicine prices against a local catalog. Price information only, not medical advice.",
+  "private": true,
+  "scripts": {
+    "test": "node tests/run_tests.js",
+    "evaluate": "node tests/evaluate.js"
+  }
+}

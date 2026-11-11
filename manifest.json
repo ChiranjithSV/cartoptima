@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "CartOptima",
+  "version": "0.1.0",
+  "description": "Compares medicine prices against a local catalog and shows safely matched, lower-cost alternatives. Price information only, not medical advice.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "http://127.0.0.1/*"],
+      "js": [
+        "core/normalize.js",
+        "core/pricing.js",
+        "core/matcher.js",
+        "content/sites/demo.js",
+        "content/sites/registry.js",
+        "content/overlay.js",
+        "content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["data/catalog.json"],
+      "matches": ["http://localhost/*", "http://127.0.0.1/*"]
+    }
+  ]
+}

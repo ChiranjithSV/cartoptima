@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CartOptima demo pharmacy page (SYNTHETIC)</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 640px; margin: 24px auto; padding: 0 16px; }
+    .banner { background: #fff4d6; border: 1px solid #f0d27a; padding: 8px 12px; border-radius: 8px; }
+    h1 { font-size: 22px; } .price { font-size: 24px; font-weight: 700; } li { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <p class="banner">Demo page with SYNTHETIC products and prices. Not a real pharmacy.</p>
+  <h1 id="product-title">Loading...</h1>
+  <div class="price" id="product-price"></div>
+  <div id="pack-size"></div>
+
+  <h3>Try the demo cases</h3>
+  <ul>
+    <li><a href="?p=1">1. Valid comparison (Febrexa 500)</a></li>
+    <li><a href="?p=6">2. Valid comparison, bigger saving (Glucomet 500)</a></li>
+    <li><a href="?p=2">3. Strength mismatch only -> no reliable match (Febrexa 650)</a></li>
+    <li><a href="?p=3">4. Extended-release product -> no reliable match (Febrexa SR 500)</a></li>
+    <li><a href="?p=4">5. Product not in catalog -> no match</a></li>
+    <li><a href="?p=5">6. Dosage form missing on page -> manual review</a></li>
+  </ul>
+
+  <script>
+    // Inline script runs BEFORE the extension (document_idle), so the extension sees the final page.
+    var PRODUCTS = {
+      1: { title: "Febrexa 500mg Tablet", price: "₹ 30.00", pack: "Strip of 15 tablets" },
+      2: { title: "Febrexa 650mg Tablet", price: "₹ 42.00", pack: "Strip of 15 tablets" },
+      3: { title: "Febrexa SR 500mg Tablet", price: "₹ 40.00", pack: "Strip of 10 tablets" },
+      4: { title: "Unknownmed 250mg Tablet", price: "₹ 50.00", pack: "Strip of 10 tablets" },
+      5: { title: "Glucomet 500mg", price: "₹ 40.00", pack: "Strip of 20 tablets" },
+      6: { title: "Glucomet 500mg Tablet", price: "₹ 40.00", pack: "Strip of 20 tablets" }
+    };
+    var id = new URLSearchParams(location.search).get("p") || "1";
+    var p = PRODUCTS[id] || PRODUCTS[1];
+    document.getElementById("product-title").textContent = p.title;
+    document.getElementById("product-price").textContent = p.price;
+    document.getElementById("pack-size").textContent = p.pack;
+  </script>
+</body>
+</html>

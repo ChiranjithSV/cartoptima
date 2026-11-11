@@ -1,0 +1,18 @@
+[
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-002","expected_match":true,"case":"compatible generic, different pack size"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-003","expected_match":true,"case":"different brand, strength written as 500mg"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-015","expected_match":true,"case":"reviewed alias (acetaminophen = paracetamol)"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-020","expected_match":true,"case":"compatible but more expensive brand"},
+  {"source_product_id":"SYN-007","candidate_product_id":"SYN-008","expected_match":true,"case":"reviewed alias (metformin hydrochloride)"},
+  {"source_product_id":"SYN-011","candidate_product_id":"SYN-012","expected_match":true,"case":"reviewed alias (amlodipine besylate)"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-004","expected_match":false,"case":"STRENGTH mismatch 500 mg vs 650 mg"},
+  {"source_product_id":"SYN-011","candidate_product_id":"SYN-017","expected_match":false,"case":"STRENGTH mismatch 5 mg vs 10 mg"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-005","expected_match":false,"case":"DOSAGE FORM mismatch tablet vs capsule"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-006","expected_match":false,"case":"RELEASE mismatch immediate vs extended"},
+  {"source_product_id":"SYN-007","candidate_product_id":"SYN-009","expected_match":false,"case":"RELEASE mismatch immediate vs extended"},
+  {"source_product_id":"SYN-007","candidate_product_id":"SYN-010","expected_match":false,"case":"release type unknown -> cannot verify"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-016","expected_match":false,"case":"misspelled ingredient -> manual review, not verified"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-013","expected_match":false,"case":"missing ingredient"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-018","expected_match":false,"case":"different currency -> price not comparable"},
+  {"source_product_id":"SYN-001","candidate_product_id":"SYN-007","expected_match":false,"case":"different ingredient"}
+]
