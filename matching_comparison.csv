@@ -1,0 +1,4 @@
+,tp,fp,tn,fn,precision,recall,false_positive_rate
+exact,3.0,1.0,9.0,3.0,0.75,0.5,0.1
+fuzzy_only,3.0,8.0,2.0,3.0,0.273,0.5,0.8
+strict (CartOptima),6.0,0.0,10.0,0.0,1.0,1.0,0.0

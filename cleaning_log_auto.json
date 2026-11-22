@@ -1,0 +1,13 @@
+{
+  "total_input": 20,
+  "titles_cleaned": 0,
+  "strengths_standardized": 1,
+  "aliases_applied": 3,
+  "invalid_price_quarantined": 1,
+  "duplicates_removed": 1,
+  "incomplete_records": 1,
+  "stale_records": 1,
+  "missing_release_type": 1,
+  "records_kept": 18,
+  "records_quarantined": 2
+}

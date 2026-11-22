@@ -1,0 +1,7 @@
+site,page_url,status,notes
+CartOptima demo page,http://localhost:8000/product.html?p=1,success,"release type not shown (optional)"
+CartOptima demo page,http://localhost:8000/product.html?p=2,success,"release type not shown (optional)"
+CartOptima demo page,http://localhost:8000/product.html?p=3,success,""
+CartOptima demo page,http://localhost:8000/product.html?p=4,success,"release type not shown (optional)"
+CartOptima demo page,http://localhost:8000/product.html?p=5,partial,"dosage form missing; release type not shown"
+CartOptima demo page,http://localhost:8000/product.html?p=6,success,"release type not shown (optional)"

@@ -1,0 +1,9 @@
+therapeutic_category,n_pairs,median_markup_pct,q1_pct,q3_pct,interpretable
+Antiviral,5,321.2,194.4,543.1,False
+Cardiac,60,271.1,191.9,378.7,True
+Antidiabetic,85,230.2,155.6,298.5,True
+Antihypertensive,95,174.6,125.0,223.9,True
+Dermatological,12,149.8,103.8,211.0,True
+Analgesic,88,134.3,103.6,170.2,True
+Antibiotic,80,116.5,83.1,156.5,True
+Gastrointestinal,70,95.1,74.1,124.2,True

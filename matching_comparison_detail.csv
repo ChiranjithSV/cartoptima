@@ -1,0 +1,17 @@
+case,expected,exact,fuzzy_only,strict
+"compatible generic, different pack size",True,True,True,True
+"different brand, strength written as 500mg",True,True,True,True
+reviewed alias (acetaminophen = paracetamol),True,False,False,True
+compatible but more expensive brand,True,True,True,True
+reviewed alias (metformin hydrochloride),True,False,False,True
+reviewed alias (amlodipine besylate),True,False,False,True
+STRENGTH mismatch 500 mg vs 650 mg,False,False,True,False
+STRENGTH mismatch 5 mg vs 10 mg,False,False,True,False
+DOSAGE FORM mismatch tablet vs capsule,False,False,True,False
+RELEASE mismatch immediate vs extended,False,False,True,False
+RELEASE mismatch immediate vs extended,False,False,True,False
+release type unknown -> cannot verify,False,False,True,False
+"misspelled ingredient -> manual review, not verified",False,False,True,False
+missing ingredient,False,False,False,False
+different currency -> price not comparable,False,True,True,False
+different ingredient,False,False,False,False

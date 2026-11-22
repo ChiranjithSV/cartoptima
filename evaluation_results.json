@@ -1,0 +1,169 @@
+{
+  "generated": "2026-11-22T05:32:10.544Z",
+  "catalog_file": "tests/fixtures/catalog_synthetic.json",
+  "counts": {
+    "tp": 6,
+    "fp": 0,
+    "tn": 10,
+    "fn": 0
+  },
+  "precision": 1,
+  "recall": 1,
+  "false_positive_rate": 0,
+  "latency_ms_worst": 7.009,
+  "cleaning_log": {
+    "total_input": 20,
+    "invalid_price_quarantined": 1,
+    "duplicates_removed": 1,
+    "incomplete_records": 1,
+    "stale_records": 1,
+    "strengths_standardized": 1,
+    "aliases_applied": 3
+  },
+  "pairs": [
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-002",
+      "case": "compatible generic, different pack size",
+      "expected": true,
+      "actual": true,
+      "status": "verified_match",
+      "reasons": "ingredient, strength, form, release type and route all match in the catalog"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-003",
+      "case": "different brand, strength written as 500mg",
+      "expected": true,
+      "actual": true,
+      "status": "verified_match",
+      "reasons": "ingredient, strength, form, release type and route all match in the catalog"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-015",
+      "case": "reviewed alias (acetaminophen = paracetamol)",
+      "expected": true,
+      "actual": true,
+      "status": "verified_match",
+      "reasons": "ingredient, strength, form, release type and route all match in the catalog"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-020",
+      "case": "compatible but more expensive brand",
+      "expected": true,
+      "actual": true,
+      "status": "verified_match",
+      "reasons": "ingredient, strength, form, release type and route all match in the catalog"
+    },
+    {
+      "source_product_id": "SYN-007",
+      "candidate_product_id": "SYN-008",
+      "case": "reviewed alias (metformin hydrochloride)",
+      "expected": true,
+      "actual": true,
+      "status": "verified_match",
+      "reasons": "ingredient, strength, form, release type and route all match in the catalog"
+    },
+    {
+      "source_product_id": "SYN-011",
+      "candidate_product_id": "SYN-012",
+      "case": "reviewed alias (amlodipine besylate)",
+      "expected": true,
+      "actual": true,
+      "status": "verified_match",
+      "reasons": "ingredient, strength, form, release type and route all match in the catalog"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-004",
+      "case": "STRENGTH mismatch 500 mg vs 650 mg",
+      "expected": false,
+      "actual": false,
+      "status": "rejected",
+      "reasons": "strength differs (500 mg vs 650 mg)"
+    },
+    {
+      "source_product_id": "SYN-011",
+      "candidate_product_id": "SYN-017",
+      "case": "STRENGTH mismatch 5 mg vs 10 mg",
+      "expected": false,
+      "actual": false,
+      "status": "rejected",
+      "reasons": "strength differs (5 mg vs 10 mg)"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-005",
+      "case": "DOSAGE FORM mismatch tablet vs capsule",
+      "expected": false,
+      "actual": false,
+      "status": "rejected",
+      "reasons": "dosage form differs (tablet vs capsule); price not comparable: different unit types"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-006",
+      "case": "RELEASE mismatch immediate vs extended",
+      "expected": false,
+      "actual": false,
+      "status": "rejected",
+      "reasons": "release type differs (immediate vs extended)"
+    },
+    {
+      "source_product_id": "SYN-007",
+      "candidate_product_id": "SYN-009",
+      "case": "RELEASE mismatch immediate vs extended",
+      "expected": false,
+      "actual": false,
+      "status": "rejected",
+      "reasons": "release type differs (immediate vs extended)"
+    },
+    {
+      "source_product_id": "SYN-007",
+      "candidate_product_id": "SYN-010",
+      "case": "release type unknown -> cannot verify",
+      "expected": false,
+      "actual": false,
+      "status": "review_required",
+      "reasons": "release type unknown"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-016",
+      "case": "misspelled ingredient -> manual review, not verified",
+      "expected": false,
+      "actual": false,
+      "status": "review_required",
+      "reasons": "ingredient names are similar but not identical - manual verification needed"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-013",
+      "case": "missing ingredient",
+      "expected": false,
+      "actual": false,
+      "status": "rejected",
+      "reasons": "missing ingredient - cannot be matched; strength differs (500 mg vs 10 mg)"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-018",
+      "case": "different currency -> price not comparable",
+      "expected": false,
+      "actual": false,
+      "status": "review_required",
+      "reasons": "price not comparable: different currencies"
+    },
+    {
+      "source_product_id": "SYN-001",
+      "candidate_product_id": "SYN-007",
+      "case": "different ingredient",
+      "expected": false,
+      "actual": false,
+      "status": "rejected",
+      "reasons": "different ingredient"
+    }
+  ]
+}
